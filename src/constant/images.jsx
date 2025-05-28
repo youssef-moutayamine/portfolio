@@ -1,11 +1,11 @@
 //~ example:
-// import photo1 from "../assets/images/photo1.png"
+import Logo from "../assets/images/logo.png"
 // import photo2 from "../assets/images/photo2.png"
 
-// export default {
-//     photo1,
-//     photo2
-// }
+export default {
+    Logo,
+    // photo2
+}
 
 //! labghiti t3eyet leh f chi folder dir 
 
