@@ -37,10 +37,10 @@ export default function Welcome({ onAnimationComplete }) {
             <motion.pre style={text}>{rounded}</motion.pre>
             {showWelcome && (
                 <div className="text-center">
-                    <div className="flex items-center justify-center gap-3">
+                    <div className="flex flex-wrap items-center justify-center gap-3">
                         <SplitText
                             text="Welcome to"
-                            className="text-6xl font-bold text-white"
+                            className="text-3xl sm:text-5xl md:text-6xl font-bold text-white"
                             delay={50}
                             duration={0.8}
                             ease="power3.out"
@@ -54,7 +54,7 @@ export default function Welcome({ onAnimationComplete }) {
                         />
                         <SplitText
                             text="My Portfolio"
-                            className="text-6xl font-bold text-red-600"
+                            className="text-3xl sm:text-5xl md:text-6xl font-bold text-red-600"
                             delay={50}
                             duration={0.8}
                             ease="power3.out"

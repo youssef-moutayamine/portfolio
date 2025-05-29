@@ -55,7 +55,7 @@ const SkillsSection = () => {
     ];
 
     return (
-        <section className="py-24 px-8 bg-gradient-to-br from-gray-800 via-gray-900 to-black overflow-hidden">
+        <section id="skills" className="py-24 px-8 bg-gradient-to-br from-gray-800 via-gray-900 to-black overflow-hidden">
             <div className="max-w-6xl mx-auto">
                 <div className="text-center mb-20">
                     <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">

@@ -5,6 +5,7 @@ import ContactSection from './partials/contact';
 import SkillsSection from './partials/skills';
 import { motion, AnimatePresence } from 'framer-motion';
 import PortfolioSection from './partials/projects';
+import ScrollAnimation from '../../components/ScrollAnimation';
 
 const HomePage = () => {
     const [showSections, setShowSections] = useState(false);
@@ -14,7 +15,7 @@ const HomePage = () => {
     };
 
     return (
-        <>
+        <div className="min-h-screen bg-gray-950">
             <HeroSection onAnimationComplete={handleHeroAnimationComplete} />
             <AnimatePresence>
                 {showSections && (
@@ -23,14 +24,22 @@ const HomePage = () => {
                         animate={{ opacity: 1 }}
                         transition={{ duration: 1 }}
                     >
-                        <AboutSection/>
-                        <SkillsSection/>
-                        {/* <PortfolioSection/> */}
-                        <ContactSection/>
+                        <ScrollAnimation>
+                            <AboutSection/>
+                        </ScrollAnimation>
+                        <ScrollAnimation>
+                            <PortfolioSection/>
+                        </ScrollAnimation>
+                        <ScrollAnimation>
+                            <SkillsSection/>
+                        </ScrollAnimation>
+                        <ScrollAnimation>
+                            <ContactSection/>
+                        </ScrollAnimation>
                     </motion.div>
                 )}
             </AnimatePresence>
-        </>
+        </div>
     );
 };
 
