@@ -63,19 +63,20 @@ const HeroSection = ({ onAnimationComplete }) => {
                     {/* Decorative Elements */}
                     <div className="mt-20 relative">
                         {/* Floating Cards Preview */}
-                        <div className="absolute right-4 sm:right-10 top-32 sm:top-10 bg-gray-900 rounded-2xl shadow-lg p-4 sm:p-6 transform rotate-3 hover:rotate-0 transition-transform duration-300 z-10">
-                            <div className="w-32 sm:w-48 h-24 sm:h-32 bg-gradient-to-r from-gray-800 to-gray-700 rounded-lg mb-4"></div>
-                            <div className="space-y-2">
-                                <div className="h-3 bg-gray-700 rounded w-3/4"></div>
-                                <div className="h-3 bg-gray-700 rounded w-1/2"></div>
+                        <div className="hidden sm:block">
+                            <div className="absolute right-4 sm:right-10 top-32 sm:top-10 bg-gray-900 rounded-2xl shadow-lg p-4 sm:p-6 transform rotate-3 hover:rotate-0 transition-transform duration-300 z-10">
+                                <div className="w-32 sm:w-48 h-24 sm:h-32 bg-gradient-to-r from-gray-800 to-gray-700 rounded-lg mb-4"></div>
+                                <div className="space-y-2">
+                                    <div className="h-3 bg-gray-700 rounded w-3/4"></div>
+                                    <div className="h-3 bg-gray-700 rounded w-1/2"></div>
+                                </div>
                             </div>
-                        </div>
-                        {/* Another floating card */}
-                        <div className="absolute left-4 sm:left-10 bottom-4 sm:bottom-10 bg-gray-900 rounded-2xl shadow-lg p-3 sm:p-4 transform -rotate-2 hover:rotate-0 transition-transform duration-300 z-10">
-                            <div className="w-24 sm:w-32 h-16 sm:h-20 bg-gradient-to-r from-gray-800 to-gray-700 rounded-lg mb-3"></div>
-                            <div className="space-y-1">
-                                <div className="h-2 bg-gray-700 rounded w-full"></div>
-                                <div className="h-2 bg-gray-700 rounded w-2/3"></div>
+                            <div className="absolute left-4 sm:left-10 bottom-4 sm:bottom-10 bg-gray-900 rounded-2xl shadow-lg p-3 sm:p-4 transform -rotate-2 hover:rotate-0 transition-transform duration-300 z-10">
+                                <div className="w-24 sm:w-32 h-16 sm:h-20 bg-gradient-to-r from-gray-800 to-gray-700 rounded-lg mb-3"></div>
+                                <div className="space-y-1">
+                                    <div className="h-2 bg-gray-700 rounded w-full"></div>
+                                    <div className="h-2 bg-gray-700 rounded w-2/3"></div>
+                                </div>
                             </div>
                         </div>
                         {/* Subtle background shapes */}

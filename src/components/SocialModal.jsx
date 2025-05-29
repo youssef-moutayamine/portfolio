@@ -48,7 +48,7 @@ const SocialModal = ({ isOpen, onClose }) => {
 
                                     {/* LinkedIn */}
                                     <a 
-                                        href="https://www.linkedin.com/in/youssef-moutayamine/" 
+                                        href="https://www.linkedin.com/in/youssef-moutayamine-25594b368?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" 
                                         target="_blank" 
                                         rel="noopener noreferrer"
                                         className="w-12 h-12 bg-gray-800 hover:bg-red-500 rounded-full flex items-center justify-center transition-all duration-200 group"

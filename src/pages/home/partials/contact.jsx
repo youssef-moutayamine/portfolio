@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import emailjs from '@emailjs/browser';
+import Particles from '../../../components/Particles';
 
 const ContactSection = () => {
     const [name, setName] = useState('');
@@ -48,8 +49,20 @@ const ContactSection = () => {
     };
 
     return (
-        <section id="contact" className="py-20 px-6 bg-gray-950">
-            <div className="max-w-4xl mx-auto">
+        <section id="contact" className="py-20 px-6 bg-gray-950 relative overflow-hidden">
+            <div style={{ width: '100%', height: '600px', position: 'absolute', top: 0, left: 0, zIndex: 0 }}>
+                <Particles
+                    particleColors={['#ffffff', '#ffffff']}
+                    particleCount={200}
+                    particleSpread={10}
+                    speed={0.1}
+                    particleBaseSize={100}
+                    moveParticlesOnHover={true}
+                    alphaParticles={false}
+                    disableRotation={false}
+                />
+            </div>
+            <div className="max-w-4xl mx-auto relative z-10">
                 {/* Section Header */}
                 <div className="text-center mb-16">
                     <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
@@ -64,11 +77,11 @@ const ContactSection = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
                     {/* Contact Info */}
                     <div className="space-y-8">
-                        <div className="bg-gray-900/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg hover:bg-gray-900/90 transition-all duration-300">
+                        <div className="bg-gray-900/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg hover:bg-gray-900/90 transition-all duration-300 w-full min-w-0">
                             <h3 className="text-2xl font-bold text-white mb-6">Get in Touch</h3>
                             <div className="space-y-6">
                                 {/* Email */}
-                                <div className="flex items-center gap-4 group cursor-pointer">
+                                <div className="flex items-start gap-4 group cursor-pointer">
                                     <div className="w-12 h-12 bg-red-900 rounded-full flex items-center justify-center group-hover:bg-red-800 transition-colors">
                                         <svg className="w-6 h-6 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -76,12 +89,12 @@ const ContactSection = () => {
                                     </div>
                                     <div>
                                         <p className="text-sm text-gray-500 uppercase tracking-wide">Email</p>
-                                        <p className="text-lg font-medium text-white">moutayamineyoussef6@email.com</p>
+                                        <p className="text-lg font-medium text-white break-all">moutayamineyoussef6@email.com</p>
                                     </div>
                                 </div>
 
                                 {/* Phone */}
-                                <div className="flex items-center gap-4 group cursor-pointer">
+                                <div className="flex items-start gap-4 group cursor-pointer">
                                     <div className="w-12 h-12 bg-red-900 rounded-full flex items-center justify-center group-hover:bg-red-800 transition-colors">
                                         <svg className="w-6 h-6 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
@@ -90,6 +103,19 @@ const ContactSection = () => {
                                     <div>
                                         <p className="text-sm text-gray-500 uppercase tracking-wide">Phone</p>
                                         <p className="text-lg font-medium text-white">+212 621 749-514</p>
+                                    </div>
+                                </div>
+
+                                {/* Location */}
+                                <div className="flex items-start gap-4 group cursor-pointer">
+                                    <div className="w-12 h-12 bg-red-900 rounded-full flex items-center justify-center group-hover:bg-red-800 transition-colors">
+                                        <svg className="w-6 h-6 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z" />
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <p className="text-sm text-gray-500 uppercase tracking-wide">Location</p>
+                                        <p className="text-lg font-medium text-white">Morocco</p>
                                     </div>
                                 </div>
                             </div>
@@ -103,7 +129,7 @@ const ContactSection = () => {
                                             <path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z" />
                                         </svg>
                                     </a>
-                                    <a href="#" className="w-10 h-10 bg-red-900 rounded-full flex items-center justify-center hover:bg-red-800 transition-colors group">
+                                    <a href="https://www.linkedin.com/in/youssef-moutayamine-25594b368?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" className="w-10 h-10 bg-red-900 rounded-full flex items-center justify-center hover:bg-red-800 transition-colors group">
                                         <svg className="w-5 h-5 text-red-400" fill="currentColor" viewBox="0 0 24 24">
                                             <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
                                         </svg>
@@ -131,7 +157,7 @@ const ContactSection = () => {
                                     value={name}
                                     onChange={(e) => setName(e.target.value)}
                                     required
-                                    className="w-full px-4 py-3 rounded-lg border border-gray-700 focus:border-red-400 focus:ring-2 focus:ring-red-900 outline-none transition-all duration-200"
+                                    className="w-full px-4 py-3 rounded-lg border border-gray-700 focus:border-red-400 focus:ring-2 focus:ring-red-900 focus:outline-none transition-all duration-200"
                                     placeholder="John Doe"
                                 />
                             </div>
@@ -145,7 +171,7 @@ const ContactSection = () => {
                                     value={email}
                                     onChange={(e) => setEmail(e.target.value)}
                                     required
-                                    className="w-full px-4 py-3 rounded-lg border border-gray-700 focus:border-red-400 focus:ring-2 focus:ring-red-900 outline-none transition-all duration-200"
+                                    className="w-full px-4 py-3 rounded-lg border border-gray-700 focus:border-red-400 focus:ring-2 focus:ring-red-900 focus:outline-none transition-all duration-200"
                                     placeholder="john@example.com"
                                 />
                             </div>
@@ -159,7 +185,7 @@ const ContactSection = () => {
                                     onChange={(e) => setMessage(e.target.value)}
                                     required
                                     rows="4"
-                                    className="w-full px-4 py-3 rounded-lg border border-gray-700 focus:border-red-400 focus:ring-2 focus:ring-red-900 outline-none transition-all duration-200 resize-none"
+                                    className="w-full px-4 py-3 rounded-lg border border-gray-700 focus:border-red-400 focus:ring-2 focus:ring-red-900 focus:outline-none transition-all duration-200 resize-none"
                                     placeholder="Tell me about your project..."
                                 ></textarea>
                             </div>
