@@ -15,7 +15,7 @@ const HomePage = () => {
     };
 
     return (
-        <div className="min-h-screen bg-gray-950">
+        <div className="min-h-screen bg-gray-950 overflow-x-hidden overflow-y-hidden">
             <HeroSection onAnimationComplete={handleHeroAnimationComplete} />
             <AnimatePresence>
                 {showSections && (

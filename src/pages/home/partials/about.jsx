@@ -9,7 +9,7 @@ const AboutSection = () => {
     };
 
     return (
-        <section id="about" className="py-20 px-6 bg-gradient-to-br from-gray-800 via-gray-900 to-black">
+        <section id="about" className="py-20 px-6 bg-gradient-to-br from-gray-800 via-gray-900 to-black overflow-x-hidden">
             <div className="max-w-7xl mx-auto">
                 <div className="text-center mb-16">
                     <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
@@ -32,8 +32,8 @@ const AboutSection = () => {
                         <div className="absolute -top-4 -left-4 w-24 h-24 bg-red-200/30 rounded-full blur-xl"></div>
                         <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-pink-200/30 rounded-full blur-xl"></div>
                         <div className="absolute top-1/2 -right-8 w-16 h-16 bg-indigo-200/40 rounded-full blur-lg"></div>
-                       
-                        <div className="absolute -bottom-8 -left-4 bg-white/80 backdrop-blur-sm rounded-2xl p-4 shadow-lg transform -rotate-3 hover:rotate-0 transition-transform duration-300">
+
+                        <div className="absolute z-10 -bottom-8 -left-4 bg-white/80 backdrop-blur-sm rounded-2xl p-4 shadow-lg transform -rotate-3 hover:rotate-0 transition-transform duration-300">
                             <div className="text-2xl font-bold text-red-600">6+</div>
                             <div className="text-sm text-gray-600">Projects</div>
                         </div>
@@ -42,24 +42,24 @@ const AboutSection = () => {
                     <div className="space-y-8">
                         <div className="bg-gray-800 rounded-2xl p-8 shadow-lg">
                             <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                                Hi, my name is <span className="text-red-500">Youssef Moutayamine</span>. 
+                                Hi, my name is <span className="text-red-500">Youssef Moutayamine</span>.
                                 I'm a passionate <span className="text-red-500">web developer</span>.
                             </h1>
                             <div className="space-y-6 text-gray-300 text-lg leading-relaxed">
                                 <p>
-                                    I specialize in building modern, responsive web applications using the latest technologies. 
-                                    With a strong foundation in <span className="font-semibold text-red-600">JavaScript</span>, 
-                                    <span className="font-semibold text-red-600"> React</span>, and front-end development, 
+                                    I specialize in building modern, responsive web applications using the latest technologies.
+                                    With a strong foundation in <span className="font-semibold text-red-600">JavaScript</span>,
+                                    <span className="font-semibold text-red-600"> React</span>, and front-end development,
                                     I love turning creative ideas into real-world digital experiences.
                                 </p>
                                 <p>
-                                    I am always eager to learn new skills, collaborate with others, and take on exciting 
-                                    challenges in the world of web development. When I'm not coding, I enjoy exploring 
+                                    I am always eager to learn new skills, collaborate with others, and take on exciting
+                                    challenges in the world of web development. When I'm not coding, I enjoy exploring
                                     new tech trends, contributing to open-source projects, and continuously improving my craft.
                                 </p>
                                 <p className="text-red-600 font-medium">
                                     Let's connect and create something amazing together!
-                                    
+
                                 </p>
                             </div>
                         </div>
@@ -86,7 +86,7 @@ const AboutSection = () => {
                         </div>
 
                         <div className="flex flex-col sm:flex-row gap-4">
-                            <button 
+                            <button
                                 onClick={scrollToContact}
                                 className="bg-white/70 backdrop-blur-sm m-auto hover:bg-white text-red-600 font-semibold py-3 px-8 rounded-full transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl border border-red-200 flex items-center justify-center gap-2"
                             >
@@ -99,7 +99,7 @@ const AboutSection = () => {
                     </div>
                 </div>
 
-              
+
             </div>
         </section>
     );

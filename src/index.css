@@ -7,3 +7,11 @@
   overflow: hidden;
   height: 100vh;
 }
+
+/* html, body {
+  overflow-x: hidden;
+} */
+
+* {
+  box-sizing: border-box;
+}

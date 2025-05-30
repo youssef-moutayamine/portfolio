@@ -14,7 +14,7 @@ const ContactSection = () => {
         setIsSubmitting(true);
         setSubmitStatus(null);
 
-        // Initialize EmailJS
+
         emailjs.init("fiICdRNCoF-DbDtYO");
 
         const serviceId = 'service_ao1p1lr';
@@ -197,9 +197,9 @@ const ContactSection = () => {
                             >
                                 {isSubmitting ? 'Sending...' : 'Send Message'}
                             </button>
-                            
+
                             {submitStatus === 'success' && (
-                                <p className="text-green-500 text-center">Message sent successfully!</p>
+                                <p className="text-green-800 text-center">Message sent successfully!</p>
                             )}
                             {submitStatus === 'error' && (
                                 <p className="text-red-500 text-center">Failed to send message. Please try again.</p>

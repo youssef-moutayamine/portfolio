@@ -4,6 +4,8 @@ import HomePage from './pages/home/home';
 import Navbar from './layouts/navbar';
 import ErrorPage from './pages/error/error';
 import ScrollProgress from './components/ScrollProgress';
+import { FiArrowUp, FiGithub, FiLinkedin } from "react-icons/fi";
+import Footer from './layouts/footer';
 
 const App = () => {
   return (
@@ -14,6 +16,7 @@ const App = () => {
         <Route path="*" element={<ErrorPage />} />
         <Route path="/" element={<HomePage />} />
       </Routes>
+      <Footer/>
     </>
   );
 };
