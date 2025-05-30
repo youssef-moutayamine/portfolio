@@ -16,19 +16,15 @@ const HeroSection = ({ onAnimationComplete }) => {
     const handleMouseMove = (e) => {
         const section = e.currentTarget;
         const rect = section.getBoundingClientRect();
-        // Offset so card is always in top right, but moves with cursor
         const offsetX = Math.min(Math.max(e.clientX - rect.left, 0), rect.width);
         const offsetY = Math.min(Math.max(e.clientY - rect.top, 0), rect.height);
-        // Card base position (top right, 40px from top, 40px from right)
-        x.set(offsetX - rect.width + 160); // 160px is card width + margin
-        y.set(offsetY - 40); // 40px from top
+        x.set(offsetX - rect.width + 160); 
+        y.set(offsetY - 40); 
     };
 
     useEffect(() => {
-        // Add no-scroll class when component mounts
         document.body.classList.add('no-scroll');
 
-        // Remove no-scroll class when animation completes
         return () => {
             document.body.classList.remove('no-scroll');
         };

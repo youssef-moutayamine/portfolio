@@ -1,4 +1,5 @@
 import React from 'react';
+import images from '../../../constant/images';
 
 const AboutSection = () => {
     const scrollToContact = () => {
@@ -21,12 +22,8 @@ const AboutSection = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                     <div className="relative">
                         <div className="relative z-10">
-                            <div className="w-80 h-80 mx-auto bg-gradient-to-br from-red-400 to-pink-400 rounded-3xl shadow-2xl flex items-center justify-center overflow-hidden">
-                                <div className="w-72 h-72 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center">
-                                    <svg className="w-32 h-32 text-white/80" fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="M12 2C13.1 2 14 2.9 14 4C14 5.1 13.1 6 12 6C10.9 6 10 5.1 10 4C10 2.9 10.9 2 12 2ZM21 9V7L15 5V7.5L12 6L9 7.5V5L3 7V9L9 11V21H15V11L21 9Z" />
-                                    </svg>
-                                </div>
+                            <div className="w-[20rem] h-[20rem] sm:w-[24rem] sm:h-[24rem] lg:w-[28rem] lg:h-[28rem] mx-auto bg-gradient-to-br from-red-400 to-pink-400 rounded-[2.5rem] shadow-2xl flex items-center justify-center overflow-hidden">
+                                <img src={images.Gif} alt="Gif" className="w-full h-full object-cover rounded-[2.5rem]" />
                             </div>
                         </div>
                         <div className="absolute -top-4 -left-4 w-24 h-24 bg-red-200/30 rounded-full blur-xl"></div>

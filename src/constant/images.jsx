@@ -5,6 +5,7 @@ import Movies from "../assets/images/movies.png"
 import YLibrary from "../assets/images/y-library.jpg"
 import Xo from "../assets/images/xo.jpg"
 import Calculator from "../assets/images/calculator.png"
+import Gif from "../assets/images/web3.gif"
 
 export default {
     Logo,
@@ -14,6 +15,7 @@ export default {
     YLibrary,
     Xo,
     Calculator,
+    Gif,
 }
 
 
